@@ -2,6 +2,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     static WebDriver chromeDriver;
     static WebDriver firefoxDriver;
@@ -11,5 +13,8 @@ public class Main {
 
         chromeDriver = new ChromeDriver();
         firefoxDriver = new FirefoxDriver();
+
+        chromeDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        firefoxDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 }

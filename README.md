@@ -1,1 +1,1 @@
-# IMDbTestSelenium
+# TestSelenium

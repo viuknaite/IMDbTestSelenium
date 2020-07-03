@@ -7,6 +7,20 @@ import java.util.concurrent.TimeUnit;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class MainPageTest {
+    //TODO прописывать при необходимости создание скриншота и передавать в него название теста
+
+    /* String fileName = testName + ".png";
+        try {
+        String currentDirectoryName = "\\screenshots\\" + directoryName; //from Drivers
+            FileUtils.copyFile(screenshot, new File(currentDirectoryName + fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+    //wait.until(ExpectedConditions.visibilityOf());
+
+    //jse.executeScript("");
+
 /*    private WebDriver chromeDriver;
     private WebDriver firefoxDriver;
     private MainPage mainPage;*/

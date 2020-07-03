@@ -1,15 +1,25 @@
+import drivers.ChromeDriver;
+import drivers.Drivers;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-    static WebDriver chromeDriver;
-    static WebDriver firefoxDriver;
+    static WebDriver driver;
+    static ChromeDriver chromeDriver;
+    static Drivers chromeDriverActions;
+    //static WebDriver firefoxDriver;
     public static void main(String[] args){
-        /*System.setProperty("webdriver.chrome.driver","C:\\Users\\viuknaite\\IdeaProjects\\IMDbTestSelenium\\drivers\\chromedriver.exe");
-        System.setProperty("webdriver.gecko.driver","C:\\Users\\viuknaite\\IdeaProjects\\IMDbTestSelenium\\drivers\\geckodriver.exe");
+
+        chromeDriver = new ChromeDriver(driver);
+        chromeDriver.init();
+        chromeDriverActions = new Drivers(driver);
+        chromeDriverActions.implicitWait();
+        chromeDriverActions.windowSize();
+
+        /*System.setProperty("webdriver.chrome.driver","\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver","\\drivers\\geckodriver.exe");
 
         chromeDriver = new drivers.ChromeDriver();
         chromeDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -24,9 +34,7 @@ public class Main {
         //chromeDriver.quit();
         //firefoxDriver.quit();
 
-        //TODO сделать общий класс Driver с отдельными методами для задержек различного вида, установки параметров окна, возможности запуска в headless режиме, JavascriptExecutor и завершения работы. В конструктор передать драйвер
-        //TODO сделать отдельные классы для каждого браузера, в которых осуществить подгрузку драйвера, инициализацию и создать экземпляр класса Driver с переданным инициализированным драйвером
-        //TODO сделать сьюты для тестов в каждом отдельном браузере, перед всем сьютом создавать экземпляр класса нужного драйвера,
+        //TODO сделать сьюты для тестов в каждом отдельном браузере, перед всем сьютом создавать экземпляр класса нужного драйвера
     }
 
 /*    // main slider check
